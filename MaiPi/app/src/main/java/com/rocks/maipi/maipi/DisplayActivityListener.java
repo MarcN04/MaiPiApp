@@ -22,7 +22,7 @@ public class DisplayActivityListener implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        JSONTask loader = new JSONTask(mActivity, mGUI);
+        JSONTask loader  = new JSONTask(mActivity, mGUI);
         loader.execute();
     }
 }

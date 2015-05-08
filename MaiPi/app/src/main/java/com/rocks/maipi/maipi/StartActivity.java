@@ -1,27 +1,24 @@
 package com.rocks.maipi.maipi;
 
-import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class DisplayActivity extends ActionBarActivity {
+public class StartActivity extends ActionBarActivity {
 
+    StartActivityGUI mGUI;
+    StartActivityListener mListener;
     PiData mData;
-    DisplayActivityGUI mGUI;
-    DisplayActivityListener mListener;
-    Bundle mPiInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display);
-        initData();
+        setContentView(R.layout.activity_start);
+        iniData();
         initGUI();
         initListener();
-        mPiInfo= this.getIntent().getExtras();
     }
 
 
@@ -47,16 +44,15 @@ public class DisplayActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    public void initData(){
+    public void iniData(){
         mData = new PiData(this);
     }
 
     public void initGUI(){
-        mGUI = new DisplayActivityGUI(this, mPiInfo);
+        mGUI = new StartActivityGUI(this, mData);
     }
 
     public void initListener(){
-        mListener = new DisplayActivityListener(this,mGUI);
+        mListener = new StartActivityListener(this,mGUI, mData);
     }
 }

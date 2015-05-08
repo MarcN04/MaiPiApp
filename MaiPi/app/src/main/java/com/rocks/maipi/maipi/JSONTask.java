@@ -2,6 +2,7 @@ package com.rocks.maipi.maipi;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 
@@ -15,10 +16,12 @@ public class JSONTask extends AsyncTask <Void, Void, JSONObject> {
 
     private DisplayActivity mActivity;
     private DisplayActivityGUI mGUI;
+    private String mURL;
 
-    public JSONTask (DisplayActivity activity, DisplayActivityGUI gui){
+    public JSONTask (DisplayActivity activity, DisplayActivityGUI gui, String url){
         mActivity = activity;
         mGUI = gui;
+        mURL = url;
     }
 
     @Override
