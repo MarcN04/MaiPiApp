@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Add New Pi"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Webservice URL"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/newPiUrl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="http://"
+            android:background="#ffffffff"
+            android:singleLine="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Pi Name"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/newPiName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#ffffffff"
+            android:singleLine="false"
+            android:layout_weight="4.83" />
+
+        <Button
+            android:id="@+id/btnAddPi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Add"
+            android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Monitored Pi's"
+        android:textColor="#000000"
+        android:textSize="20dp"/>
+
+
+        <ListView
+            android:id="@+id/myPiListView"
+            android:background="@drawable/border_ui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+</LinearLayout>
